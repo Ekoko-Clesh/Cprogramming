@@ -173,8 +173,3 @@ void SearchStudent(Data *ptr, Data p[],int *iteratorPtr){
   }
 }
 
-/*
-    if (strncmp(buf,ret,strlen(ret))<0 && (strncmp(buf,"Clesh",strlen("Clesh"))<0)){
-      printf("\nTRUE\n");
-
-*/
