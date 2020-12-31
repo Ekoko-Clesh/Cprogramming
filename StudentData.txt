@@ -1,0 +1,78 @@
+
+NAME:      Voldie
+GRADE 1:  12.00
+GRADE 2:  14.00
+AVERAGE:  13.00
+
+
+NAME:      Ana
+GRADE 1:  13.00
+GRADE 2:  15.00
+AVERAGE:  14.00
+
+
+NAME:      Sintia
+GRADE 1:  14.00
+GRADE 2:  16.00
+AVERAGE:  15.00
+
+
+NAME:      Lucas
+GRADE 1:  14.00
+GRADE 2:  20.00
+AVERAGE:  17.00
+
+
+NAME:      Selma
+GRADE 1:  19.00
+GRADE 2:  16.00
+AVERAGE:  17.50
+
+
+
+NAME:      Bianca
+GRADE 1:  18.00
+GRADE 2:  12.00
+AVERAGE:  15.00
+
+
+NAME:      Cleiton
+GRADE 1:  12.00
+GRADE 2:  17.00
+AVERAGE:  14.50
+
+
+NAME:      AnaLu
+GRADE 1:  12.00
+GRADE 2:  17.00
+AVERAGE:  14.50
+
+
+NAME:      Cyriac
+GRADE 1:  20.00
+GRADE 2:  19.00
+AVERAGE:  19.50
+
+
+NAME:      Voldie
+GRADE 1:  20.00
+GRADE 2:  20.00
+AVERAGE:  20.00
+
+
+NAME:      Cesar
+GRADE 1:  12.00
+GRADE 2:  14.00
+AVERAGE:  13.00
+
+
+NAME:      Anab
+GRADE 1:  12.00
+GRADE 2:  17.00
+AVERAGE:  14.50
+
+
+NAME:      AnaHUSB
+GRADE 1:  12.00
+GRADE 2:  20.00
+AVERAGE:  16.00
