@@ -150,15 +150,13 @@ void SearchStudent(Data *ptr, Data p[],int *iteratorPtr){
       while(fscanf(file,"%s",buffer)==1){
         if(strncmp(buffer,searchName,strlen(searchName))== 0){
             t='T';
-            printf("%s\n",buffer);
+            printf("NAME: %s\n\n",buffer);
             for(int i=0; i < 8; i++){
               fscanf(file,"%s",buffer);
               printf("%s  ",buffer);
             }
            
             if(t){
-              printf("\n\nPress any key to return\n");
-              getchar();
               printf("\n\n");
               break;
             }
