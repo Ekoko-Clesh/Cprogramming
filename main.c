@@ -11,7 +11,7 @@ typedef struct Data{ // Creating a student struct
 // prototypesfunction prototypes
 void InsertData(Data p[], int *iteratorPtr);
 void ReadData(Data *ptr, Data p[],int *iteratorPtr);
-
+void ShowData(Data *ptr, Data p[],int *iteratorPtr);
 
 int main(void) { // Main function
  Data *ptr, p[1];
@@ -31,6 +31,7 @@ int main(void) { // Main function
             break;
           }
      case 2:{
+            ShowData(ptr, p, iteratorPtr);
             break;
           }
      case 3:{
@@ -110,4 +111,21 @@ void InsertData(Data p[], int *iteratorPtr){
         fclose(file);
     }
      
+}
+
+void ShowData(Data *ptr, Data p[],int *iteratorPtr){
+    FILE *file;
+    char character =' ';
+    system("clear");
+    if((file = fopen("StudentData.txt", "r"))==NULL){
+      printf("Unable to Open the File\n");
+      exit(1);
+    }
+    else{
+        while((character = getc(file))!=EOF){
+          printf("%c", character);
+        }
+        fclose(file);
+    }
+    free(ptr);
 }
