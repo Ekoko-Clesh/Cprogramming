@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct Data{ // Creating a student struct
     char name[50];
@@ -12,6 +13,7 @@ typedef struct Data{ // Creating a student struct
 void InsertData(Data p[], int *iteratorPtr);
 void ReadData(Data *ptr, Data p[],int *iteratorPtr);
 void ShowData(Data *ptr, Data p[],int *iteratorPtr);
+void SearchStudent(Data *ptr, Data p[],int *iteratorPtr);
 
 int main(void) { // Main function
  Data *ptr, p[1];
@@ -35,6 +37,7 @@ int main(void) { // Main function
             break;
           }
      case 3:{
+            SearchStudent(ptr,p,iteratorPtr);
             break;
           }
      case 0:{
@@ -100,7 +103,7 @@ void InsertData(Data p[], int *iteratorPtr){
  
     FILE *file;
     int i=0;
-    if((file = fopen("StudentData.txt","a")) == NULL){
+    if((file = fopen("StudentData.txt","a+")) == NULL){
       printf("Error opening file");
       exit(1);
     }
@@ -127,5 +130,46 @@ void ShowData(Data *ptr, Data p[],int *iteratorPtr){
         }
         fclose(file);
     }
+
     free(ptr);
 }
+
+void SearchStudent(Data *ptr, Data p[],int *iteratorPtr){
+
+  char buffer[100],searchName[50], t='F';
+  FILE *file;
+  system("clear");
+  printf("Enter the that Name you want to search\n");
+  scanf("%s",searchName);
+  system("clear");
+  if((file = fopen("StudentData.txt", "r"))==NULL){
+    printf("Unable to Open the File\n");
+    exit(1);
+  }
+  else{
+      while(fscanf(file,"%s",buffer)==1){
+        if(strncmp(buffer,searchName,strlen(searchName))== 0){
+            t='T';
+            printf("%s\n",buffer);
+            for(int i=0; i < 8; i++){
+              fscanf(file,"%s",buffer);
+              printf("%s  ",buffer);
+            }
+           
+            if(t){
+              printf("\n\nPress any key to return\n");
+              getchar();
+              printf("\n\n");
+              break;
+            }
+           
+        }
+        
+      }
+      if(t=='F'){
+          printf("\nThe student was not registered\n\n");
+      }
+      fclose(file);
+  }
+}
+
