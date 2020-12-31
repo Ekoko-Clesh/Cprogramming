@@ -127,5 +127,6 @@ void ShowData(Data *ptr, Data p[],int *iteratorPtr){
         }
         fclose(file);
     }
+    
     free(ptr);
 }
