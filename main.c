@@ -105,22 +105,9 @@ void InsertData(Data p[], int *iteratorPtr){
     }
     else{
         for(i=0; i < (*iteratorPtr); i++){
-            fputs("\nNAME:      ",file);
-            fputs(p[i].name,file);
-            fputs("\n",file);
-
-            fputs("GRADE 1:  ",file);
-            fprintf(file,"%.2f",p[i].grade1);
-            fputs("\n",file);
-
-            fputs("GRADE 2:  ",file);
-            fprintf(file,"%.2f",p[i].grade2);
-            fputs("\n",file);
-
-            fputs("AVERAGE:  ",file);
-            fprintf(file,"%.2f",p[i].average);
-            fputs("\n\n",file);
+            fprintf(file,"NAME\t\t%s\nGRADE 1:\t\t%.2f\nGRADE 2:\t\t%.2f\nAVERAGE:\t\t%.2f\n\n",p[i].name,p[i].grade1,p[i].grade2,p[i].average);
         }
+        fclose(file);
     }
-     fclose(file);
+     
 }
