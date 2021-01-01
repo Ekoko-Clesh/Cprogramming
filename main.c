@@ -9,7 +9,7 @@ typedef struct Data{ // Creating a student struct
     float average;
 }Data;
 
-// prototypesfunction prototypes
+// prototypes function prototypes
 void InsertData(Data p[], int *iteratorPtr);
 void ReadData(Data *ptr, Data p[],int *iteratorPtr);
 void ShowData(Data *ptr, Data p[],int *iteratorPtr);
